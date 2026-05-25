@@ -20,4 +20,7 @@ export default class Human extends PIXI.Container {
   startBreathing() {
     this.breathingInterval = setInterval(this.breathe(), 3000);
   }
+  suicide() {
+    clearInterval(this.breathingInterval)
+  }
 }
